@@ -49,8 +49,7 @@ class PersonImplementation
             }
         }
 
-            return maxAge;
-        
+        return maxAge;
     }
 
 public static void Main(string[] args)

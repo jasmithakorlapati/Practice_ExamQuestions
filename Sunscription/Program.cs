@@ -43,9 +43,7 @@
                 throw new ArgumentOutOfRangeException();
             }
              _discountPercentage = discountPercentage;
-              _isSubscriptionValid = isSubscriptionValid;
-            
-
+             _isSubscriptionValid = isSubscriptionValid;
         }
         public int GetBroadbandPlan()
         {
@@ -69,16 +67,13 @@
                 throw new ArgumentNullException();
             }
             else
-
             {
                 var res = new List<Tuple<string, int>>();
                 foreach (var item in _broadbandPlans)
                 {
-                   
                     string name = item.GetType().Name;
                     int amount = item.GetBroadbandPlan();
                     res.Add(new Tuple<string,int>(name, amount));
-                    
                 }
                 return res;
             }

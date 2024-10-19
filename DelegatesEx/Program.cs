@@ -8,7 +8,7 @@
         public string Name;
         public int Marks;
         public char SportsGreade;
-        public Delegate IsEligibleforScholarship {get;set;}
+   
 
         public static string GetEligibleStudents(List<Student> studenetsList, IsEligibleforScholarship isEligible)
         {
@@ -26,7 +26,6 @@
                         result += ", " + item.Name;
                     }
                 }
-
             }
             return result;
         }
@@ -58,28 +57,28 @@
                 RollNo = 2,
                 Name = "Rahul",
                 Marks = 82,
-                SportsGreade = 'A'
+                SportsGreade ='A'
             };
             Student obj3 = new Student()
             {
                 RollNo = 3,
                 Name = "Kiran",
                 Marks = 89,
-                SportsGreade = 'B'
+                SportsGreade ='B'
             };
             Student obj4 =new Student()
             {
                 RollNo = 4,
                 Name = "Sunil",
                 Marks = 86,
-                SportsGreade = 'A'
+                SportsGreade ='A'
             };
             listStudents.Add(obj1);
             listStudents.Add(obj2);
             listStudents.Add(obj3);
             listStudents.Add(obj4);
-            IsEligibleforScholarship isEligiblefor = new IsEligibleforScholarship(Student.ScholarshipEligibility);
-            var res=Student.GetEligibleStudents(listStudents,isEligiblefor);
+            IsEligibleforScholarship isEligible = new IsEligibleforScholarship(Student.ScholarshipEligibility);
+            var res=Student.GetEligibleStudents(listStudents,isEligible);
             Console.WriteLine(res);
            
             

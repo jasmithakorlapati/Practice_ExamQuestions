@@ -15,8 +15,14 @@ namespace Question2_Overloading
         static void Main(string[] args)
         {
             Source source = new Source();
-            Console.WriteLine(source.Add(1,2,3));
-            Console.WriteLine(source.Add(4.9,7,0));
+            int a=int.Parse(Console.ReadLine());
+            int b=int.Parse(Console.ReadLine());
+            int c=int.Parse(Console.ReadLine());
+            double da=double.Parse(Console.ReadLine());
+            double db=double.Parse(Console.ReadLine());
+            double dc=double.Parse(Console.ReadLine());
+            Console.WriteLine(source.Add(a,b,c));
+            Console.WriteLine(source.Add(da,db,dc));
         }
      }
 }
